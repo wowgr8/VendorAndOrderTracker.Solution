@@ -1,6 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendAndOrd.Models;
+using System.Collections.Generic;
 using System;
+
 
 namespace VendAndOrd.Tests
 {
@@ -45,6 +47,23 @@ namespace VendAndOrd.Tests
 
       //Assert
       Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      //Arrange
+      string vendor01 = "Tony's";
+      string vendor02 = "Chapala";
+      Vendor newVendor01 = new Vendor(vendor01);
+      Vendor newVendor02 = new Vendor(vendor02);
+      List<Vendor> newList = new List<Vendor> { newVendor01, newVendor02 };
+
+      //Act
+      List<Vendor> result = Vendor.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
