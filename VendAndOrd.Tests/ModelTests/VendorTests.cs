@@ -5,10 +5,15 @@ using System;
 namespace VendAndOrd.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+
     [TestMethod]
-    public void VendorConstructor_CreatesInstancesOfCategory_Vendor()
+    public void VendorConstructor_CreatesInstancesOfVendor_Vendor()
     {
       Vendor newVendor = new Vendor("test vendor");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
@@ -26,6 +31,20 @@ namespace VendAndOrd.Tests
 
       //Assert
       Assert.AreEqual(name, result);
+    }
+
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      //Arrange
+      string name = "test vendor";
+      Vendor newVendor = new Vendor(name);
+
+      //Act
+      int result = newVendor.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
     }
   }
 }
