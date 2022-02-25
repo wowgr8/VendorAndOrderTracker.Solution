@@ -15,7 +15,19 @@ namespace VendAndOrd.Tests
     }
 
     [TestMethod]
-    public void GetDescription_SetDescription_String()
+    public void GetDescription_ReturnDescription_String()
+    {
+      //Arrange
+      string order = "10 Bread";
+      //Act
+      Order newOrder = new Order(order);
+      string result = newOrder.Description;
+      //Assert
+      Assert.AreEqual(order, result);
+    }
+
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
     {
       //Arrange
       string order = "10 Bread";
@@ -27,5 +39,7 @@ namespace VendAndOrd.Tests
       //Assert
       Assert.AreEqual(updatedOrder, result);
     }
+
+
   }
 }
