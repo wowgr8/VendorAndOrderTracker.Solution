@@ -17,7 +17,7 @@ namespace VendAndOrd.Models
       Orders = new List<Order>{};
     }
 
-        public static void ClearAll()
+    public static void ClearAll()
     {
       _instances.Clear();
     }
