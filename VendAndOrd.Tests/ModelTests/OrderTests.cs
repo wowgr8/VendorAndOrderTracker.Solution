@@ -73,5 +73,18 @@ namespace VendAndOrd.Tests
       //Assert
       CollectionAssert.AreEqual(newOrder, result);
     }
+
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      //Arrange
+      string description = "1 Bread";
+      Order newOrder = new Order(description);
+      //Act
+      int result = newOrder.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
   }
 }
