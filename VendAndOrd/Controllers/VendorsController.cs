@@ -5,7 +5,7 @@ using VendAndOrd.Models;
 
 namespace VendAndOrd.Controllers
 {
-  public class VendorsControllers : Controller 
+  public class VendorsController : Controller 
   {
     [HttpGet("/vendors")]
     public ActionResult Index()
