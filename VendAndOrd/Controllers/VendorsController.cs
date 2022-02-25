@@ -13,5 +13,11 @@ namespace VendAndOrd.Controllers
       List<Vendor> fullListVendors = Vendor.GetAll();
       return View(fullListVendors);
     }
+
+    [HttpGet("/vendors/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
   }
 }
