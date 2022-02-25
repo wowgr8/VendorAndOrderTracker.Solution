@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using VendAndOrd.Models;
 using System.Collections.Generic;
 
 namespace VendAndOrd.Controllers
@@ -8,10 +8,10 @@ namespace VendAndOrd.Controllers
   {
 
     [HttpGet("/vendors/{vendorId}/orders/new")]
-    public ActionResult New(int categoryId)
+    public ActionResult New(int vendorId)
     {
-      Category category = Category.Find(categoryId);
-      return View(category);
+      Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
     }
 
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
