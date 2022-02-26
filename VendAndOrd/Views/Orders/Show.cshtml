@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
-    <h1>To Do List order Details: </h1>
+    <h1>Order Details: </h1>
 
     <h2>@Model["order"].Description</h2>
     <h3>Vendor: @Model["vendor"].Name</h3>
+    <h3>Deliver on: @Model["order"].DeliveryDate</h3>
+    <h3>Total price:$ @Model["order"].Price</h3>
 
     <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
     <a href='/vendors'>View all vendors</a>
