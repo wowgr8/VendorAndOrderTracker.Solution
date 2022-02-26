@@ -5,12 +5,16 @@ namespace VendAndOrd.Models
   public class Order
   {
     public string Description { get; set; }
+    public string DeliveryDate { get; set; }
+    public int Price { get; set; }
     private static List<Order> _instances = new List<Order> {};
     public int Id { get; }
     
-    public Order(string description)
+    public Order(string description, string deliveryDate, int price)
     {
       Description = description;
+      DeliveryDate = deliveryDate;
+      Price = price;
       _instances.Add(this);
       Id = _instances.Count;
     }
