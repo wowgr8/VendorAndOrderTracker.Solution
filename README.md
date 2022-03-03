@@ -22,7 +22,7 @@ Create a ASP.NET MVC web application that stores a list of orders under the resp
 
 ### User Interface
 
-The web application will provide a form, which asks the user for the vendor's name and description, then asks the user for the order, delivery date, and price. Once entered, the user can add another other, enter a new vendor, or view a list of current vendors.
+The web application will provide a form, which asks the user for the vendor's name and description, then asks the user for the order, delivery date, and price. Once entered, the user can add another order, enter a new vendor, or view a list of current vendors.
 
 ## Project Setup/Installation Instructions
 
